@@ -1,7 +1,8 @@
 {
-  "name": "travelo-frontend",
+  "name": "motelo-frontend",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "dependencies": {
     "@studio-freight/lenis": "^1.0.42",
     "@testing-library/jest-dom": "^5.17.0",
