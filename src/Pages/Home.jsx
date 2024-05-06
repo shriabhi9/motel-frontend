@@ -4,6 +4,7 @@ import { HeroSection } from "../Components/HeroSection";
 import { Advertisement } from "../Components/Advertisement";
 
 
+
 export const Home = () => {
   return (
     <div className="h-full">
@@ -12,6 +13,7 @@ export const Home = () => {
         <HeroSection />
       </div>
       <Advertisement/>
+      
     </div>
   );
 };

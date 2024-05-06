@@ -6,7 +6,7 @@ import { icons } from "../Data";
 export const Advertisement = () => {
   return (
     <div>
-      <section className="pt-20 pb-10 flex item-center justify-center md:gap-[8rem] gap-[4rem] flex-wrap">
+      <section className="pt-32 pb-10 flex item-center justify-center md:gap-[8rem] gap-[4rem] flex-wrap">
         <div className="relative">
           <img
             src={bluryRoom}
@@ -32,39 +32,39 @@ export const Advertisement = () => {
         </div>
       </section>
 
-      <section className="flex flex-col justify-center items-center pt-10 pb-10">
-        <h4>Why you choose us!</h4>
-        <p>
+      <section className="flex flex-col justify-center items-center pt-32 pb-10 gap-10 px-10">
+        <h4 className="text-2xl font-extrabold text-[#233142]">Why you choose us!</h4>
+        <p className="w-[50%] text-center font-bold text-[#455d7a]">
           Naturally, it's becoming even more important for hotel and hospitality
           brands to stand out from the crowd. Content marketing remains a key
           way for hotels to do this.
         </p>
-        <div className="flex ">
-          <div>
+        <div className="flex item-center justify-center gap-10 md:flex-row flex-col">
+          <div className="flex flex-col items-center gap-4 border py-8 min-w-[100px]">
             <span>
               <img src={icons.click} alt="click" className=" w-14"/>
             </span>
-            <p>Easy Booking</p>
-            <p>The booking process should include minimal steps.</p>
+            <p className="text-xl font-bold text-[#233142] ">Easy Booking</p>
+            <p className="w-[70%] text-center text-[#455d7a] text-sm">The booking process should include minimal steps.</p>
           </div>
-          <div>
+          <div className="flex flex-col items-center gap-4 border py-8">
             
             <span><img src={icons.interface} alt="interface"  className=" w-14"/></span>
-            <p>Friendly interface</p>
-            <p>A hotel booking engine with a good user-friendly.</p>
+            <p className="text-xl font-bold text-[#233142]">Friendly interface</p>
+            <p className="w-[70%] text-center text-[#455d7a] text-sm">A hotel booking engine with a good user-friendly.</p>
           </div>
-          <div>
+          <div className="flex flex-col items-center gap-4 border py-8">
             <span><img src={icons.rensponsiblity} alt="responsiblity" className=" w-14"/></span>
-            <p>Responsibility</p>
-            <p>You should be able to add rooms to your system.</p>
+            <p className="text-xl font-bold text-[#233142] ">Responsibility</p>
+            <p className="w-[70%] text-center text-[#455d7a] text-sm">You should be able to add rooms to your system.</p>
           </div>
-          <div>
+          <div className="flex flex-col items-center gap-4 border py-8">
             <span><img src={icons.order} alt="oorder" className=" w-14"/></span>
-            <p>Quick order supply</p>
-            <p>The booking process should include minimal steps</p>
+            <p className="text-xl font-bold text-[#233142] ">Quick order supply</p>
+            <p className="w-[70%] text-center text-[#455d7a] text-sm">The booking process should include minimal steps</p>
           </div>
         </div>
       </section>
-    </div>
+    </div> 
   );
 };
