@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 export const HeroSection = () => {
     return (
@@ -12,13 +11,13 @@ export const HeroSection = () => {
         Pet-friendly hotels are becoming increasingly popular, appealing to
         travellers who can't bear to be parted
       </p>
-      <Link to={"/"}>
+      <a href="/">
         <button className="flex items-center flex-col group bg-[#f95959] rounded-md md:px-8 md:py-4 px-5 py-3 transition-all duration-100 hover:text-[#233142] hover:bg-[#e3e3e3]" >
           <span className="text-sm font-bold scale-100 group-hover:scale-95 duration-200 transition-all">
             Read more
           </span>
         </button>
-      </Link>
+      </a>
     </section>
   );
 };
