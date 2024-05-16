@@ -5,7 +5,7 @@ import { icons } from "../Data";
 export const Advertisement = () => {
   return (
     <div>
-      <section className="pt-32 pb-10 flex item-center justify-center md:gap-[8rem] gap-[4rem] flex-wrap">
+      <section className="pt-32 pb-4 flex item-center justify-center md:gap-[8rem] gap-[4rem] flex-wrap">
         <div className="relative">
           <img
             src={bluryRoom}

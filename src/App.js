@@ -5,6 +5,7 @@ import { About } from "./Pages/About";
 import { Contact } from "./Pages/Contact";
 import { Rooms } from "./Pages/Rooms";
 
+
 function App() {
   return (
     <div className="h-screen comfortaa-font">

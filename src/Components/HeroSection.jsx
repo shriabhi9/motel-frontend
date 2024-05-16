@@ -2,10 +2,10 @@ import React from "react";
 
 export const HeroSection = () => {
     return (
-    <section className="text-[#e3e3e3] md:pl-[9rem] pl-[5.5rem] flex flex-col gap-4 justify-center py-[6rem] duration-200 h-full -mt-16">
+    <section className="text-[#e3e3e3] md:pl-[9rem] pl-[3rem] flex flex-col gap-4 justify-center py-[6rem] duration-200 h-full -mt-16">
       <h3 className="text-[#f95959] text-xl font-bold">SERENITY</h3>
       <h2 className="text-[2em] md:text-[4em] duration-200 w-[30rem]">
-        Stay with us feel like <span className="text-[#f95959]">home</span>.
+        Stay with us feel like <span className="text-[#f95959]">home.</span>
       </h2>
       <p className="md:text-[18px] text-[14px] pr-4 w-[30rem]">
         Pet-friendly hotels are becoming increasingly popular, appealing to

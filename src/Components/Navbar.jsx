@@ -15,7 +15,7 @@ export const Navbar = () => {
             <div className="bg-white w-1 h-1 rounded-full scale-0 group-hover:scale-100 duration-200 transition-all"></div>
           </button>
         </Link>
-        <button>
+        <button >
           <span className="text-[#e3e3e3] text-xl"><FaBarsStaggered /></span>
         </button>
       </div>
