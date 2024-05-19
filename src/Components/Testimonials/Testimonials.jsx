@@ -1,17 +1,31 @@
 import React from "react";
 import { testimonialData } from "../../Data";
 import Card from "./Card";
+import Slider from "react-slick"
 
 export const Testimonials = () => {
+  const settings = {
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    speed: 5000,
+    autoplaySpeed: 1000,
+    pauseOnHover: true,
+    };
+  
+
   return (
-    <div className="flex items-center justify-around flex-col pt-10 pb-20 gap-10">
-      <h1 className="text-2xl font-bold text-[#233142]">
+    <div className="w-full pt-10 pb-10">
+      <h1 className="text-2xl font-bold text-[#233142] text-center">
         What our client says
       </h1>
-      <div className="flex items-center justify-center flex-wrap gap-4">
-        {testimonialData.map((testimonial) => (
-          <Card testimonial={testimonial} key={testimonial.id} />
-        ))}
+      <div className="pt-8 w-full">
+        <Slider {...settings} className="md:ml-96 md:mr-96 md:pl-44 md:pr-44 pl-14 pr-14">
+          {testimonialData.map((testimonial) => (   
+            <Card testimonial={testimonial} key={testimonial.id} />
+          ))}
+        </Slider>
       </div>
     </div>
   );

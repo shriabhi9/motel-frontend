@@ -7,7 +7,7 @@ const Card = (props) => {
   const description = props.testimonial.text;
 
   return (
-    <section className="flex flex-col w-[400px] items-center justify-center gap-2 bg-[#e3e3e3] rounded-xl py-2 px-2">
+    <section className="flex flex-col w-[400px] items-center justify-center gap-2 rounded-xl py-2 px-2 bg-[#e3e3e3]">
       <div className="w-[2rem]">
         <img src={image} alt="xd" className="w-full rounded-full" />
       </div>

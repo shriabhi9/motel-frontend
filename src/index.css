@@ -2,46 +2,45 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap");
 
-@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap');
-
-.hotel{
-    background-image: url("../public/hotel.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+.hotel {
+  background-image: url("../public/hotel.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 ::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
-.first-color { 
-	background: #233142; 
-}
-	
-.second-color { 
-	background: #455d7a; 
+.first-color {
+  background: #233142;
 }
 
-.third-color { 
-	background: #f95959; 
+.second-color {
+  background: #455d7a;
 }
 
-.fourth-color { 
-	background: #e3e3e3; 
+.third-color {
+  background: #f95959;
+}
+
+.fourth-color {
+  background: #e3e3e3;
 }
 .comfortaa-font {
-    font-family: "Comfortaa", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-  }
-  
-.btn{
-    position: relative;
-    text-align: center;
-    cursor: pointer;
+  font-family: "Comfortaa", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }
-.btn span{
-    position: relative;
-    display: inline-block;
+
+.btn {
+  position: relative;
+  text-align: center;
+  cursor: pointer;
+}
+.btn span {
+  position: relative;
+  display: inline-block;
 }
