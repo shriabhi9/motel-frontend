@@ -21,7 +21,7 @@ export const Testimonials = () => {
         What our client says
       </h1>
       <div className="pt-8 w-full">
-        <Slider {...settings} className="md:ml-96 md:mr-96 md:pl-38 md:pr-38 pl-12 pr-12">
+        <Slider {...settings} className="md:ml-44 md:mr-44 mr-0 ml-0 md:pl-38 md:pr-38 pl-12 pr-12">
           {testimonialData.map((testimonial) => (   
             <Card testimonial={testimonial} key={testimonial.id} />
           ))}
