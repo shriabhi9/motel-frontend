@@ -8,7 +8,7 @@ import { Rooms } from "./Pages/Rooms";
 
 function App() {
   return (
-    <div className="h-screen comfortaa-font">
+    <div className="comfortaa-font w-screen overflow-x-hidden h-screen">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/About" element={<About />} />

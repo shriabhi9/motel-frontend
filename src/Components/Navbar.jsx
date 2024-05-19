@@ -21,7 +21,7 @@ export const Navbar = () => {
       </div>
 
 
-      <nav className="md:scale-100 scale-0 flex items-center justify-around py-4 text-[#e3e3e3] backdrop-blur-xl sticky top-0">
+      <nav className="md:scale-100 scale-0 flex items-center justify-around py-4 text-[#e3e3e3] backdrop-blur-xl sticky top-0 w-full">
         <Link to={"/"}>
           <button className="flex items-center flex-col group">
             <span className="text-sm font-bold scale-100 group-hover:scale-95 duration-200 transition-all">

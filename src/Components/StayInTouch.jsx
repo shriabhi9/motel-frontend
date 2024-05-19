@@ -2,10 +2,10 @@ import React from "react";
 
 export const StayInTouch = () => {
   return (
-    <div className="flex flex-col items-center pt-10 pb-20 gap-5">
+    <div className="flex flex-col items-center pt-10 pb-20 gap-5 w-full">
       <h2 className="font-bold  text-[#455d7a]">STAY IN TOUCH</h2>
       <p  className="text-[#233142] md:text-2xl font-bold text-xl md:w-full w-[25rem] text-center transition-all duration-300">Join our email. First to know about specials, event and more!</p>
-      <label className="flex gap-4">
+      <label className="flex flex-wrap gap-4 items-center justify-center">
         <input
           type="email"
           className="border rounded-md w-[300px] px-2 py-2 "
