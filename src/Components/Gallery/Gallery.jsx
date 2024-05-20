@@ -13,7 +13,7 @@ export const Gallery = () => {
       );
       const data = await response.json();
 
-      const firstFiveHotel = await data.slice(0, 5);
+      const firstFiveHotel = data.slice(0, 5);
       setGalleryHotels(firstFiveHotel);
     } catch (error) {
       console.log("Error fetching in hotels", error);
@@ -24,10 +24,12 @@ export const Gallery = () => {
     fetchingHotelData();
   }, []);
   console.log(galleryHotel);
+
+
   return (
     <section className="w-full mt-10 mb-10 md:pl-44 md:pr-44">
-      <div className=" flex flex-wrap justify-center w-full gap-10 mt-4 mb-4">
-        <div className="w-[250px] flex flex-col justify-center gap-8 mr-6">
+      <div className=" flex flex-wrap justify-center  w-full gap-10 mt-4 mb-4">
+        <div className="w-[250px] flex flex-col justify-center items-start gap-8 mr-6">
           <h1 className="font-bold text-2xl">About hotel gallery</h1>
           <p className="text-sm text-[#969494]">
             while some of these examples are real-actually offering guests a

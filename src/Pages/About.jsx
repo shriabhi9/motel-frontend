@@ -3,8 +3,9 @@ import { Navbar } from '../Components/Navbar'
 
 export const About = () => {
   return (
-    <div>
+    <div className='flex'>
       <Navbar/>
+
     </div>
   )
 }
