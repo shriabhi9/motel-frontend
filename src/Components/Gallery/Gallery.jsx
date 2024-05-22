@@ -2,16 +2,17 @@ import React, { useState } from "react";
 import { useEffect } from "react";
 import { Gallerycard } from "./Gallerycard";
 import { Link } from "react-router-dom";
+import axios from 'axios';
 
 export const Gallery = () => {
   const [galleryHotel, setGalleryHotels] = useState([]);
 
   async function fetchingHotelData() {
     try {
-      const response = await fetch(
+      const response = await axios.get(
         "https://hotello-backend-xivc.onrender.com/api/hotels"
       );
-      const data = await response.json();
+      const data = response.data;
 
       const firstFiveHotel = data.slice(0, 5);
       setGalleryHotels(firstFiveHotel);
@@ -23,7 +24,6 @@ export const Gallery = () => {
   useEffect(() => {
     fetchingHotelData();
   }, []);
-  console.log(galleryHotel);
 
 
   return (
