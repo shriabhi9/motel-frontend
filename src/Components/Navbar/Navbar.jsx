@@ -1,27 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { FaBarsStaggered } from "react-icons/fa6";
+import { DropMenu } from "./DropMenu";
 
 export const Navbar = () => {
 
   return (
-    <>
-      <div className="w-full z-[2] absolute top-5 right-18 right flex justify-around md:scale-0 scale-100">
-      <Link to={"/"}>
-          <button className="flex items-center flex-col group">
-            <span className="text-[#e3e3e3] text-sm font-bold scale-100 group-hover:scale-95 duration-200 transition-all">
-              MOTELO
-            </span>
-            <div className="bg-white w-1 h-1 rounded-full scale-0 group-hover:scale-100 duration-200 transition-all"></div>
-          </button>
-        </Link>
-        <button >
-          <span className="text-[#e3e3e3] text-xl"><FaBarsStaggered /></span>
-        </button>
-      </div>
+    <div>
+      <DropMenu/>
 
 
-      <nav className="md:scale-100 scale-0 flex items-center justify-around py-4 text-[#e3e3e3] backdrop-blur-xl sticky top-0 w-full">
+      <nav className="md:scale-100 scale-0 flex items-center justify-around py-4 text-[#e3e3e3] backdrop-blur-xl w-full">
         <Link to={"/"}>
           <button className="flex items-center flex-col group">
             <span className="text-sm font-bold scale-100 group-hover:scale-95 duration-200 transition-all">
@@ -80,6 +68,6 @@ export const Navbar = () => {
           </Link>
         </div>
       </nav>
-    </>
+    </div>
   );
 };

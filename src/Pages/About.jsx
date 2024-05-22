@@ -1,9 +1,9 @@
 import React from 'react'
-import { Navbar } from '../Components/Navbar'
+import { Navbar } from '../Components/Navbar/Navbar'
 
 export const About = () => {
   return (
-    <div className='flex'>
+    <div>
       <Navbar/>
 
     </div>
