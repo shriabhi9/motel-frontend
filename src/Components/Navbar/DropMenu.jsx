@@ -11,7 +11,7 @@ export const DropMenu = () => {
   }
 
   return (
-    <>
+    <div>
       <div className="md:hidden right md:scale-0 scale-100 py-6 w-full flex items-center justify-around backdrop-blur-xl">
         <Link to={"/"}>
           <button className="flex items-center flex-col group">
@@ -27,13 +27,13 @@ export const DropMenu = () => {
           onClick={dropMenuHandler}
         >
           <span className="text-[#e3e3e3] text-xl">
-            {dMenu ? <></> : <FaBarsStaggered />}
+            {dMenu ? <div className="absolute"></div> : <FaBarsStaggered />}
           </span>
         </button>
       </div>
 
-      {dMenu ? (
-        <div className="w-[50%] h-[730px] absolute right-0 top-0 rounded-l-full md:scale-0 scale-100 text-white flex items-center flex-col justify-center gap-10 backdrop-blur-3xl">
+      
+        <div className={dMenu ? "w-[100%] h-[100%] absolute top-0 text-white flex items-center flex-col justify-center gap-10 backdrop-blur-3xl py-8 overflow-hidden z-10":"hidden"}>
           <Link to={"/"}>
             <button className="flex items-center flex-col group">
               <span className="text-sm font-bold scale-100 group-hover:scale-95 duration-200 transition-all">
@@ -75,13 +75,10 @@ export const DropMenu = () => {
               </span>
             </button>
           </Link>
-          <button onClick={dropMenuHandler} className="">
+          <button onClick={dropMenuHandler} className="absolute right-5 top-10">
             <RxCross2 className="transition-all duration-300" />
           </button>
         </div>
-      ) : (
-        <></>
-      )}
-    </>
+    </div>
   );
 };

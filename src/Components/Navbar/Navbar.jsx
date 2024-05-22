@@ -7,8 +7,6 @@ export const Navbar = () => {
   return (
     <div>
       <DropMenu/>
-
-
       <nav className="md:scale-100 scale-0 flex items-center justify-around py-4 text-[#e3e3e3] backdrop-blur-xl w-full">
         <Link to={"/"}>
           <button className="flex items-center flex-col group">
@@ -68,6 +66,7 @@ export const Navbar = () => {
           </Link>
         </div>
       </nav>
+      
     </div>
   );
 };
