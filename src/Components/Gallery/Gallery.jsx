@@ -4,6 +4,7 @@ import { Gallerycard } from "./Gallerycard";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import SkeletonGalleryCard from "../utitlities/skeletonGalleryCard";
+import { shuffleArray } from "../../Data";
 
 export const Gallery = () => {
   const [galleryHotel, setGalleryHotels] = useState([]);
@@ -14,7 +15,9 @@ export const Gallery = () => {
       const response = await axios.get(
         "https://hotello-backend-xivc.onrender.com/api/hotels"
       );
-      const data = response.data;
+      const output = response.data;
+
+      const data = shuffleArray(output)
 
       const firstFiveHotel = data.slice(0, 5);
       setGalleryHotels(firstFiveHotel);
