@@ -2,10 +2,12 @@ import React, { useState } from "react";
 import { useEffect } from "react";
 import { Gallerycard } from "./Gallerycard";
 import { Link } from "react-router-dom";
-import axios from 'axios';
+import axios from "axios";
+import SkeletonGalleryCard from "../utitlities/skeletonGalleryCard";
 
 export const Gallery = () => {
   const [galleryHotel, setGalleryHotels] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   async function fetchingHotelData() {
     try {
@@ -16,7 +18,9 @@ export const Gallery = () => {
 
       const firstFiveHotel = data.slice(0, 5);
       setGalleryHotels(firstFiveHotel);
+      setLoading(false);
     } catch (error) {
+      setLoading(false);
       console.log("Error fetching in hotels", error);
     }
   }
@@ -24,7 +28,6 @@ export const Gallery = () => {
   useEffect(() => {
     fetchingHotelData();
   }, []);
-
 
   return (
     <section className="w-full mt-10 mb-10 md:pl-44 md:pr-44">
@@ -43,9 +46,14 @@ export const Gallery = () => {
             </button>
           </Link>
         </div>
-        {galleryHotel.map((hotel) => {
-          return <Gallerycard hotel={hotel} key={hotel._id} />;
-        })}
+
+        {loading
+          ? Array.from({ length: 5 }).map((_, index) => (
+              <SkeletonGalleryCard key={index} />
+            ))
+          : galleryHotel.map((hotel) => (
+              <Gallerycard hotel={hotel} key={hotel._id} />
+            ))}
       </div>
     </section>
   );

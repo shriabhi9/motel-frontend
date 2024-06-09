@@ -33,7 +33,7 @@ export const DropMenu = () => {
       </div>
 
       
-        <div className={dMenu ? "w-[100%] h-[100%] absolute top-0 text-white flex items-center flex-col justify-center gap-10 backdrop-blur-3xl py-8 overflow-hidden z-10":"hidden"}>
+        <div className={dMenu ? "w-[100%] h-[100%] absolute top-0 flex items-center flex-col justify-center gap-10 backdrop-blur-3xl py-8 overflow-hidden z-10":"hidden"}>
           <Link to={"/"}>
             <button className="flex items-center flex-col group">
               <span className="text-sm font-bold scale-100 group-hover:scale-95 duration-200 transition-all">
