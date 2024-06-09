@@ -39,25 +39,25 @@ export const Advertisement = () => {
           way for hotels to do this.
         </p>
         <div className="flex item-center justify-center gap-10 md:flex-row flex-col">
-          <div className="flex flex-col items-center justify-center gap-4 border py-8 min-w-[100px]">
+          <div className="flex flex-col items-center justify-center gap-4 border-[#8796a85d] py-8 min-w-[100px]">
             <span>
               <img src={icons.click} alt="click" className=" w-14"/>
             </span>
             <p className="text-xl font-bold text-[#233142] ">Easy Booking</p>
             <p className="w-[70%] text-center text-[#455d7a] text-sm">The booking process should include minimal steps.</p>
           </div>
-          <div className="flex flex-col items-center gap-4 border py-8 justify-center">
+          <div className="flex flex-col items-center gap-4 border-[#8796a85d]  py-8 justify-center">
             
             <span><img src={icons.interface} alt="interface"  className=" w-14"/></span>
             <p className="text-xl font-bold text-[#233142]">Friendly interface</p>
             <p className="w-[70%] text-center text-[#455d7a] text-sm">A hotel booking engine with a good user-friendly.</p>
           </div>
-          <div className="flex flex-col items-center gap-4 border py-8 justify-center">
+          <div className="flex flex-col items-center gap-4 border-[#8796a85d]  py-8 justify-center">
             <span><img src={icons.rensponsiblity} alt="responsiblity" className=" w-14"/></span>
             <p className="text-xl font-bold text-[#233142] ">Responsibility</p>
             <p className="w-[70%] text-center text-[#455d7a] text-sm">You should be able to add rooms to your system.</p>
           </div>
-          <div className="flex flex-col items-center gap-4 border py-8 justify-center">
+          <div className="flex flex-col items-center gap-4 border-[#8796a85d]  py-8 justify-center">
             <span><img src={icons.order} alt="oorder" className=" w-14"/></span>
             <p className="text-xl font-bold text-[#233142] ">Quick order supply</p>
             <p className="w-[70%] text-center text-[#455d7a] text-sm">The booking process should include minimal steps</p>

@@ -1,30 +1,38 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { useEffect } from "react";
 import { Gallerycard } from "./Gallerycard";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import SkeletonGalleryCard from "../utitlities/skeletonGalleryCard";
-import { shuffleArray } from "../../Data";
+import { getRandomSubset } from "../../Data";
 
 export const Gallery = () => {
   const [galleryHotel, setGalleryHotels] = useState([]);
   const [loading, setLoading] = useState(true);
+  const previousFetchedIds = useRef(new Set());
 
   async function fetchingHotelData() {
     try {
       const response = await axios.get(
         "https://hotello-backend-xivc.onrender.com/api/hotels"
       );
-      const output = response.data;
+      const data = response.data;
 
-      const data = shuffleArray(output)
+      const filteredData = data.filter(
+        (hotel) => !previousFetchedIds.current.has(hotel._id)
+      );
 
-      const firstFiveHotel = data.slice(0, 5);
-      setGalleryHotels(firstFiveHotel);
+      const randomFiveHotel = getRandomSubset(filteredData, 7);
+
+      randomFiveHotel.forEach((hotel) =>
+        previousFetchedIds.current.add(hotel._id)
+      );
+
+      setGalleryHotels(randomFiveHotel);
       setLoading(false);
     } catch (error) {
+      console.log("Error fetching hotels", error);
       setLoading(false);
-      console.log("Error fetching in hotels", error);
     }
   }
 
@@ -34,7 +42,7 @@ export const Gallery = () => {
 
   return (
     <section className="w-full mt-10 mb-10 md:pl-44 md:pr-44">
-      <div className=" flex flex-wrap justify-center  w-full gap-10 mt-4 mb-4">
+      <div className="flex item-center flex-wrap justify-center w-full gap-10 mt-4 mb-4">
         <div className="w-[250px] flex flex-col justify-center items-start gap-8 mr-6">
           <h1 className="font-bold text-2xl">About hotel gallery</h1>
           <p className="text-sm text-[#969494]">
@@ -49,14 +57,15 @@ export const Gallery = () => {
             </button>
           </Link>
         </div>
-
-        {loading
-          ? Array.from({ length: 5 }).map((_, index) => (
-              <SkeletonGalleryCard key={index} />
-            ))
-          : galleryHotel.map((hotel) => (
-              <Gallerycard hotel={hotel} key={hotel._id} />
-            ))}
+        
+          {loading
+            ? Array.from({ length: 5 }).map((_, index) => (
+                <SkeletonGalleryCard key={index} />
+              ))
+            : galleryHotel.map((hotel) => (
+                <Gallerycard hotel={hotel} key={hotel._id} />
+              ))}
+        
       </div>
     </section>
   );

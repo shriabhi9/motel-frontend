@@ -12,13 +12,13 @@ export const DropMenu = () => {
 
   return (
     <div>
-      <div className="md:hidden right md:scale-0 scale-100 py-6 w-full flex items-center justify-around backdrop-blur-xl">
+      <div className="md:hidden right md:scale-0 scale-100 py-6 w-full flex items-baseline justify-around ">
         <Link to={"/"}>
           <button className="flex items-center flex-col group">
-            <span className="text-[#e3e3e3] text-sm font-bold scale-100 group-hover:scale-95 duration-200 transition-all">
+            <span className="text-[#f95959] text-md font-bold scale-100 group-hover:scale-95 duration-200 transition-all">
               MOTELO
             </span>
-            <div className="bg-white w-1 h-1 rounded-full scale-0 group-hover:scale-100 duration-200 transition-all"></div>
+            <div className="bg-black w-1 h-1 rounded-full scale-0 group-hover:scale-100 duration-200 transition-all"></div>
           </button>
         </Link>
 
@@ -26,7 +26,7 @@ export const DropMenu = () => {
           className="transition-all duration-300"
           onClick={dropMenuHandler}
         >
-          <span className="text-[#e3e3e3] text-xl">
+          <span className=" text-xl">
             {dMenu ? <div className="absolute"></div> : <FaBarsStaggered />}
           </span>
         </button>
@@ -69,7 +69,7 @@ export const DropMenu = () => {
             </span>
           </button>
           <Link to={""}>
-            <button className="flex items-center flex-col group bg-[#f95959] rounded-md px-8 py-4 transition-all duration-100 hover:text-[#233142] hover:bg-[#e3e3e3]">
+            <button className="flex items-center flex-col group bg-[#f95959] rounded-md px-8 py-4 transition-all duration-100 hover:text-[#233142] hover:bg-[#e3e3e3] text-[#e3e3e3]">
               <span className="text-sm font-bold scale-100 group-hover:scale-95 duration-200 transition-all">
                 SIGN UP
               </span>

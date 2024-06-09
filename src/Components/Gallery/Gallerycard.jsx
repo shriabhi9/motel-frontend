@@ -19,19 +19,21 @@ export const Gallerycard = (props) => {
         />
         <div className="flex flex-col">
           <h3 className="font-bold">
-            {address},{city}
+            {city}, {address}
           </h3>
           <div className="flex justify-between">
             <h3 className="text-sm">{state}</h3>
-            <div className="flex items-baseline ">
-              <BiStar className="text-[16px]" />
-              <h3> {rating}</h3>
-            </div>
           </div>
         </div>
-        <div className="flex gap-1 items-baseline justify-start">
-          <h3 className="font-bold">Rs. {price}</h3>
-          <p className="text-sm">night</p>
+        <div className="flex gap-1 items-baseline justify-between">
+          <div className="flex gap-1 items-baseline justify-start">
+            <h3 className="font-bold">Rs. {price}</h3>
+            <p className="text-sm">night</p>
+          </div>
+          <div className="flex items-baseline ">
+            <BiStar className="text-[16px]" />
+            <h3> {rating}</h3>
+          </div>
         </div>
       </div>
     </div>
