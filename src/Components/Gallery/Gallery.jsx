@@ -22,7 +22,7 @@ export const Gallery = () => {
         (hotel) => !previousFetchedIds.current.has(hotel._id)
       );
 
-      const randomFiveHotel = getRandomSubset(filteredData, 7);
+      const randomFiveHotel = getRandomSubset(filteredData, 5);
 
       randomFiveHotel.forEach((hotel) =>
         previousFetchedIds.current.add(hotel._id)

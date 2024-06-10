@@ -11,8 +11,8 @@ export const DropMenu = () => {
   }
 
   return (
-    <div>
-      <div className="md:hidden right md:scale-0 scale-100 py-6 w-full flex items-baseline justify-around ">
+    <div >
+      <div className="md:hidden right md:scale-0 scale-100 pt-6 w-full flex items-baseline justify-around backdrop-blur-xl">
         <Link to={"/"}>
           <button className="flex items-center flex-col group">
             <span className="text-[#f95959] text-md font-bold scale-100 group-hover:scale-95 duration-200 transition-all">
