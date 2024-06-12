@@ -7,7 +7,7 @@ export const Navbar = () => {
   return (
     <div>
       <DropMenu/>
-      <nav className="md:scale-100 scale-0 flex items-center justify-around w-full py-4 backdrop-blur-xl">
+      <nav className="md:scale-100 scale-0 flex items-center justify-around w-full py-4 backdrop-blur-sm">
         <Link to={"/"}>
           <button className="flex items-center flex-col group">
             <span className="text-md text-[#f95959] font-extrabold scale-100 group-hover:scale-95 duration-200 transition-all">
