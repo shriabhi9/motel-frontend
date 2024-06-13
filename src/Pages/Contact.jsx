@@ -6,6 +6,7 @@ export const Contact = () => {
   return (
     <div className=''>
       <Navbar/>
+      <div className='h-[300px] w-full hotel flex items-center justify-center text-4xl'><p>Contact Us</p></div>
       <Footer/>    
     </div>
   )

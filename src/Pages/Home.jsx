@@ -10,7 +10,7 @@ import { Gallery } from "../Components/Gallery/Gallery";
 export const Home = () => {
   return (
     <div className="h-full">
-      <div className="h-[100%] hotel">
+      <div className="h-[100%] bedroom">
         <Navbar />
         <HeroSection />
       </div>
