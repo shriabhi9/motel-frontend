@@ -35,7 +35,7 @@ export const Hotels = () => {
   return (
     <div className="">
       <Navbar />
-      <div className="mountain h-[300px] text-4xl flex items-center justify-center"><p>All hotels</p></div>
+      <div className="mountain h-[400px] text-4xl flex items-center justify-center md:mt-[-4.2rem] mt-[-9rem] text-[#455d7a]"><p>All hotels</p></div>
       <div className="px-10 flex flex-col items-center justify-center py-4">
         <div className="flex gap-8">
           <Categories />

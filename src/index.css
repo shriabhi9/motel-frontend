@@ -5,19 +5,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap");
 
 .bedroom {
-  background-image: url("../public/blurry-bedroom.jpg");
+  background-image: url("../public/hotel.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 .mountain {
-  background-image: url("../public/Mountain.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-.hotel {
-  background-image: url("../public/hotel.jpg");
+  background-image: url("../public/hotel2.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

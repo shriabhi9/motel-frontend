@@ -1,7 +1,7 @@
 import React from "react";
-import { bluryRoom } from "../Data";
 import { FaPlayCircle } from "react-icons/fa";
 import { icons } from "../Data";
+import { bluryRoom } from "../Data";
 export const Advertisement = () => {
   return (
     <div>

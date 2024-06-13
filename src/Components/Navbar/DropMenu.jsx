@@ -45,35 +45,35 @@ export const DropMenu = () => {
       >
         
         <Link to={"/"}>
-          <button className="flex items-center flex-col group">
+          <button className="flex items-center flex-col group text-[#233142]">
             <span className="text-sm font-bold scale-100 group-hover:scale-95 duration-200 transition-all">
               HOME
             </span>
           </button>
         </Link>
         <Link to={"/Hotels"}>
-          <button className="flex items-center flex-col group">
+          <button className="flex items-center flex-col group text-[#233142]">
             <span className="text-sm font-bold scale-100 group-hover:scale-95 duration-200 transition-all">
               HOTLES
             </span>
           </button>
         </Link>
         <Link to={"/About"}>
-          <button className="flex items-center flex-col group">
+          <button className="flex items-center flex-col group text-[#233142]">
             <span className="text-sm font-bold scale-100 group-hover:scale-95 duration-200 transition-all">
               ABOUT
             </span>
           </button>
         </Link>
         <Link to={"/Contact"}>
-          <button className="flex items-center flex-col group">
+          <button className="flex items-center flex-col group text-[#233142]">
             <span className="text-sm font-bold scale-100 group-hover:scale-95 duration-200 transition-all">
               CONTACT
             </span>
           </button>
         </Link>
 
-        <button className="flex items-center  flex-col group">
+        <button className="flex items-center  flex-col group text-[#233142]">
           <span className="text-sm font-bold scale-100 group-hover:scale-95 duration-200 transition-all">
             LOGIN
           </span>
