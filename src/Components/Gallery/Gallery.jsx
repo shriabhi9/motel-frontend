@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import { Gallerycard } from "./Gallerycard";
 import { Link } from "react-router-dom";
 import axios from "axios";
-import SkeletonGalleryCard from "../utitlities/skeletonGalleryCard";
+import SkeletonGalleryCard from "../utilities/skeletonGalleryCard";
 import { getRandomSubset } from "../../Data";
 
 export const Gallery = () => {

@@ -41,7 +41,7 @@ const Categories = () => {
     fetchingCategoriesData();
   }, [numberOfCategoriesToShow]);
   return (
-    <div className="flex gap-4 w-full px-2 py-2 rounded-md mt-2 mb-2">
+    <div className="flex gap-10 w-full px-2 py-2 rounded-md mt-2 mb-2">
       {numberOfCategoriesToShow >= 10 && (
         <button onClick={LeftClickToShowCategories}>
           <FaCaretLeft />
@@ -50,7 +50,7 @@ const Categories = () => {
       {categories.map((category) => {
         return (
           <button key={category._id}>
-            <div>{category.category}</div>
+            <span>{category.category}</span>
           </button>
         );
       })}

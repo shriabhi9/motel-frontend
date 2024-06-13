@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { Navbar } from "../Components/Navbar/Navbar";
-import SkeletonGalleryCard from "../Components/utitlities/skeletonGalleryCard";
+import SkeletonGalleryCard from "../Components/utilities/skeletonGalleryCard";
 import axios from "axios";
 import { Gallerycard } from "../Components/Gallery/Gallerycard";
 import Categories from "../Components/Categories/Categories";
 import { CiFilter } from "react-icons/ci";
+import Footer from "../Components/Footer";
 
-export const Rooms = () => {
+
+export const Hotels = () => {
   const [hotelsData, setHotelsData] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -16,6 +18,7 @@ export const Rooms = () => {
         "https://hotello-backend-xivc.onrender.com/api/hotels"
       );
       const data = response.data;
+
 
       setHotelsData(data);
       setLoading(false);
@@ -32,7 +35,8 @@ export const Rooms = () => {
   return (
     <div className="">
       <Navbar />
-      <div className="px-10 flex flex-col items-center justify-center">
+      <div className="mountain h-[300px] text-4xl flex items-center justify-center"><p>All hotels</p></div>
+      <div className="px-10 flex flex-col items-center justify-center py-4">
         <div className="flex gap-8">
           <Categories />
           <button>
@@ -51,7 +55,9 @@ export const Rooms = () => {
                 <Gallerycard hotel={hotel} key={hotel._id} />
               ))}
         </div>
+      
       </div>
+      <Footer/>
     </div>
   );
 };
