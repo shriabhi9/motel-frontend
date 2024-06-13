@@ -13,7 +13,7 @@ export const DropMenu = () => {
   return (
     <div className="h-full w-full">
       <div className="flex items-center justify-center w-full h-full">
-        <div className="md:hidden right md:scale-0 scale-100 pt-6 w-[75%] flex items-baseline justify-around backdrop-blur-sm">
+        <div className="md:hidden right md:scale-0 scale-100 pt-6 w-[75%] flex items-center justify-around backdrop-blur-sm">
           <Link to={"/"}>
             <button className="flex items-center flex-col group">
               <span className="text-[#f95959] text-md font-bold scale-100 group-hover:scale-95 duration-200 transition-all">
@@ -27,7 +27,7 @@ export const DropMenu = () => {
             className="transition-all duration-300"
             onClick={dropMenuHandler}
           >
-            <span className=" text-xl">
+            <span className="text-xl">
               {dMenu ? <button onClick={dropMenuHandler}>
           <RxCross2 className="transition-all duration-300" />
         </button> : <FaBarsStaggered />}
