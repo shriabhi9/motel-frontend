@@ -33,7 +33,7 @@ export const Advertisement = () => {
 
       <section className="flex flex-col justify-center items-center pt-32 pb-10 gap-10 px-10">
         <h4 className="text-2xl font-extrabold text-[#233142]">Why you choose us!</h4>
-        <p className="w-[50%] text-center font-bold text-[#455d7a]">
+        <p className="md:w-[50%] text-center font-bold text-[#455d7a]">
           Naturally, it's becoming even more important for hotel and hospitality
           brands to stand out from the crowd. Content marketing remains a key
           way for hotels to do this.
