@@ -49,7 +49,7 @@ export const Gallery = () => {
             while some of these examples are real-actually offering guests a
             stay in the locations advertised - it's mainly just a way
           </p>
-          <Link to={"/Rooms"}>
+          <Link to={"/hotels"}>
             <button className="flex items-center flex-col group bg-[#f95959] rounded-md md:px-8 md:py-4 px-5 py-3 transition-all duration-100 hover:bg-[#233142] hover:text-[#e3e3e3]">
               <span className="text-[#e3e3e3] text-sm font-bold scale-100 group-hover:scale-95 duration-200 transition-all">
                 View more
