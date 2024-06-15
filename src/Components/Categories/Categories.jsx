@@ -3,25 +3,28 @@ import axios from "axios";
 import { useState } from "react";
 import { useEffect } from "react";
 import { FaCaretLeft, FaCaretRight } from "react-icons/fa";
+import { useCategory } from "../../Context/Category-context";
+
 
 const Categories = () => {
   const [categories, setCategories] = useState([]);
   const [numberOfCategoriesToShow, setNumberOfCategoriesToShow] = useState(0);
-
+  const [state,setState] = useCategory();
+  
   const RightClickToShowCategories = () => {
     setNumberOfCategoriesToShow((prev) => prev + 10);
   };
   const LeftClickToShowCategories = () => {
     setNumberOfCategoriesToShow((prev) => prev - 10);
   };
-
+  
+  
   async function fetchingCategoriesData() {
     try {
       const response = await axios.get(
         "https://hotello-backend-xivc.onrender.com/api/category"
       );
       const data = response.data;
-      // console.log(output)
       const categoriesToShow = data.slice(
         numberOfCategoriesToShow + 10 > data.length
           ? data.length - 10
@@ -31,15 +34,20 @@ const Categories = () => {
           : numberOfCategoriesToShow + 10
       );
       setCategories(categoriesToShow);
-      console.log(categories);
     } catch (error) {
       console.log("Error in fetching Categories", error);
     }
   }
-
+  
   useEffect(() => {
-    fetchingCategoriesData();
+  fetchingCategoriesData();
   }, [numberOfCategoriesToShow]);
+  
+  const handleCategoryClick = (category) =>{
+    setState(category);
+    console.log(state);
+  }
+  
   return (
     <div className="flex gap-10 w-full px-2 py-2 rounded-md mt-2 mb-2">
       {numberOfCategoriesToShow >= 10 && (
@@ -49,8 +57,8 @@ const Categories = () => {
       )}
       {categories.map((category) => {
         return (
-          <button key={category._id}>
-            <span>{category.category}</span>
+          <button key={category._id} onClick={()=>handleCategoryClick(category.category)}>
+            {category.category}
           </button>
         );
       })}
