@@ -6,19 +6,19 @@ import { Gallerycard } from "../Components/Gallery/Gallerycard";
 import Categories from "../Components/Categories/Categories";
 import { CiFilter } from "react-icons/ci";
 import Footer from "../Components/Footer";
-
+import { useCategory } from "../Context/Category-context";
 
 export const Hotels = () => {
   const [hotelsData, setHotelsData] = useState([]);
   const [loading, setLoading] = useState(true);
+  const { hotelCategory } = useCategory();
 
   async function fetchingHotelData() {
     try {
       const response = await axios.get(
-        "https://hotello-backend-xivc.onrender.com/api/hotels"
+        `https://hotello-backend-xivc.onrender.com/api/hotels?category=${hotelCategory}`
       );
       const data = response.data;
-
 
       setHotelsData(data);
       setLoading(false);
@@ -30,18 +30,21 @@ export const Hotels = () => {
 
   useEffect(() => {
     fetchingHotelData();
-  }, []);
+  }, [hotelCategory]);
 
   return (
     <div className="">
       <Navbar />
-      <div className="mountain h-[400px] text-4xl flex items-center justify-center md:mt-[-4.2rem] mt-[-9rem] text-[#455d7a]"><p>All hotels</p></div>
+      <div className="mountain h-[400px] text-4xl flex items-center justify-center md:mt-[-4.2rem] mt-[-9rem] text-[#455d7a]">
+        <p>All hotels</p>
+      </div>
       <div className="px-10 flex flex-col items-center justify-center py-4">
         <div className="flex gap-8">
           <Categories />
           <button>
             <span className="flex items-center justify-center gap-2">
-              <CiFilter className="text-2xl" /><p>filter</p>
+              <CiFilter className="text-2xl" />
+              <p>filter</p>
             </span>
           </button>
         </div>
@@ -55,9 +58,8 @@ export const Hotels = () => {
                 <Gallerycard hotel={hotel} key={hotel._id} />
               ))}
         </div>
-      
       </div>
-      <Footer/>
+      <Footer />
     </div>
   );
 };
