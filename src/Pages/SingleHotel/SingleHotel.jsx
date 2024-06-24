@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { useParams } from "react-router-dom";
-import axios from "axios";
 import { useEffect } from "react";
 import { Navbar } from "../../Components/Navbar/Navbar";
 import SingleHotelImages from "./SingleHotelPageComponents/SingleHotelImages";
