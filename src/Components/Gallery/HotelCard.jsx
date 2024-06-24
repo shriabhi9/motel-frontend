@@ -1,21 +1,31 @@
 import React from "react";
 import { BiStar } from "react-icons/bi";
+import { useNavigate } from "react-router-dom";
 
-export const Gallerycard = (props) => {
+export const HotelCard = (props) => {
+  const id = props.hotel._id;
   const image = props.hotel.image;
   const address = props.hotel.address;
   const city = props.hotel.city;
   const price = props.hotel.price;
   const state = props.hotel.state;
   const rating = props.hotel.rating;
+  const name = props.hotel.name
+  
+
+  const navigate = useNavigate();
+
+  function handelSingleHotelClick(){
+    navigate(`/Hotels/${name}/${address}-${state}/${id}/reserve`);
+  }
 
   return (
-    <div className="shadow hover:shadow-xl px-4 py-4 rounded-md">
+    <div className="shadow hover:shadow-xl px-4 py-4 rounded-md" onClick={handelSingleHotelClick}>
       <div className="flex flex-col gap-2">
         <img
           src={image}
           alt="xd"
-          className="w-[250px] h-[200px] object-cover rounded-md"
+          className="w-[250px] h-[200px] object-fit rounded-md"
         />
         <div className="flex flex-col">
           <h3 className="font-bold">

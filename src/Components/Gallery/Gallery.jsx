@@ -1,6 +1,6 @@
 import React, { useState, useRef } from "react";
 import { useEffect } from "react";
-import { Gallerycard } from "./Gallerycard";
+import { HotelCard } from "./HotelCard";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import SkeletonGalleryCard from "../utilities/skeletonGalleryCard";
@@ -63,7 +63,7 @@ export const Gallery = () => {
                 <SkeletonGalleryCard key={index} />
               ))
             : galleryHotel.map((hotel) => (
-                <Gallerycard hotel={hotel} key={hotel._id} />
+                <HotelCard hotel={hotel} key={hotel._id} />
               ))}
         
       </div>
