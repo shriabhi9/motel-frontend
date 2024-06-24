@@ -1,11 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { DropMenu } from "./DropMenu";
+import SearchButton from "./SearchButton";
+
 
 export const Navbar = () => {
   return (
     <div className="sticky top-3 z-[10]">
-        <DropMenu />
+      <DropMenu />
+
       <div className="flex items-center justify-center z-[20]">
         <nav className="md:scale-100 scale-0 flex items-center justify-around w-[75%] py-4 backdrop-blur-sm rounded-xl">
           <Link to={"/"}>
@@ -51,17 +54,10 @@ export const Navbar = () => {
             </Link>
           </div>
           <div className="flex items-center gap-10">
-            <button className="flex items-center  flex-col group">
-              <span className="text-sm font-bold scale-100 group-hover:scale-95 duration-200 transition-all text-[#233142]">
-                LOGIN
-              </span>
-              <div className="bg-[#233142] w-1 h-1 rounded-full scale-0 group-hover:scale-100 duration-200 transition-all"></div>
-            </button>
+            <SearchButton/>
             <Link to={""}>
-              <button className="flex items-center flex-col group bg-[#f95959] rounded-md px-6 py-2 transition-all duration-100 hover:text-[#233142] hover:bg-[#e3e3e3] text-[#e3e3e3]">
-                <span className="text-sm font-bold scale-100 group-hover:scale-95 duration-200 transition-all">
-                  SIGN UP
-                </span>
+              <button className="flex items-center flex-col group bg-[#f95959] rounded-md px-6 py-2 transition-all duration-200 hover:text-[#233142] hover:bg-[#e3e3e3] text-[#e3e3e3]">
+                <span className="text-sm font-bold">LOGIN</span>
               </button>
             </Link>
           </div>
