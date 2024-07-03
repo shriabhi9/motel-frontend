@@ -1,5 +1,9 @@
 import React, { useState } from "react";
 import { useParams } from "react-router-dom";
+<<<<<<< HEAD
+=======
+import axios from "axios";
+>>>>>>> temp
 import { useEffect } from "react";
 import { Navbar } from "../../Components/Navbar/Navbar";
 import SingleHotelImages from "./SingleHotelPageComponents/SingleHotelImages";
@@ -9,7 +13,10 @@ const SingleHotel = () => {
   const [singleHotel, setSingleHotel] = useState({});
 
   const { id } = useParams();
+<<<<<<< HEAD
   
+=======
+>>>>>>> temp
   useEffect(() => {
     async function fetchingSingleHotelData() {
       try {
@@ -31,9 +38,15 @@ const SingleHotel = () => {
 
   return (
     <div className="w-full">
+<<<<<<< HEAD
       <Navbar singleHotel={singleHotel} />
       <div className="md:py-8 pb-2 px-3 md:px-10 w-full">
         <h2 className="text-xl font-bold">{singleHotel.name}, {singleHotel.city}</h2>
+=======
+      <Navbar />
+      <div className="md:py-8 pb-2 px-3 md:px-10 w-full">
+        <h2 className="text-xl font-bold">{singleHotel.name}</h2>
+>>>>>>> temp
         <div className="flex flex-col items-center justify-center w-full">
           <SingleHotelImages
             singleHotelImage={singleHotelImage}
