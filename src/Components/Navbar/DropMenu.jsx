@@ -2,11 +2,6 @@ import React, { useState } from "react";
 import { FaBarsStaggered } from "react-icons/fa6";
 import { RxCross2 } from "react-icons/rx";
 import { Link } from "react-router-dom";
-<<<<<<< HEAD
-
-=======
-import SearchButton from "./SearchButton";
->>>>>>> temp
 
 export const DropMenu = () => {
   const [dMenu, setdMenu] = useState(false);
@@ -30,11 +25,6 @@ export const DropMenu = () => {
           </Link>
 
           <div className="flex gap-4 items-baseline justify-center">
-<<<<<<< HEAD
-=======
-
-            <SearchButton/>
->>>>>>> temp
             <button
               className="transition-all duration-300"
               onClick={dropMenuHandler}
