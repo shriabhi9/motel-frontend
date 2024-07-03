@@ -5,10 +5,6 @@ import { About } from "./Pages/About";
 import { Contact } from "./Pages/Contact";
 import { Hotels } from "./Pages/Hotels";
 import SingleHotel from "./Pages/SingleHotel/SingleHotel";
-<<<<<<< HEAD
-
-=======
->>>>>>> temp
 
 
 

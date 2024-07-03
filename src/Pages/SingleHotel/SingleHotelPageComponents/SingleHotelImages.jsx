@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 import React from "react";
-=======
-import React, { useState } from "react";
->>>>>>> temp
 
 const SingleHotelImages = ({ singleHotelImage, multipleHotelImage }) => {
   return (
