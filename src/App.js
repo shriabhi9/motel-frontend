@@ -8,6 +8,7 @@ import SingleHotel from "./Pages/SingleHotel/SingleHotel";
 
 
 
+
 function App() {
   return (
     <div className="comfortaa-font w-screen overflow-x-hidden h-screen ">

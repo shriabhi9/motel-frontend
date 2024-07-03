@@ -9,6 +9,7 @@ const SingleHotel = () => {
   const [singleHotel, setSingleHotel] = useState({});
 
   const { id } = useParams();
+  
   useEffect(() => {
     async function fetchingSingleHotelData() {
       try {
@@ -30,9 +31,9 @@ const SingleHotel = () => {
 
   return (
     <div className="w-full">
-      <Navbar />
+      <Navbar singleHotel={singleHotel} />
       <div className="md:py-8 pb-2 px-3 md:px-10 w-full">
-        <h2 className="text-xl font-bold">{singleHotel.name}</h2>
+        <h2 className="text-xl font-bold">{singleHotel.name}, {singleHotel.city}</h2>
         <div className="flex flex-col items-center justify-center w-full">
           <SingleHotelImages
             singleHotelImage={singleHotelImage}
