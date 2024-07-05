@@ -5,7 +5,7 @@ import { Login } from "./Login";
 import Register from "./Register";
 
 const Auth = () => {
-  const [login, setLogin] = useState(false);
+  const [login, setLogin] = useState(true);
 
   return (
       <div className="w-full">
@@ -20,7 +20,7 @@ const Auth = () => {
           <button
             className="flex items-center flex-col group bg-[#f95959] rounded-md px-8 py-2 transition-all duration-200 hover:text-[#233142] hover:bg-[#e3e3e3] text-[#e3e3e3] w-[200px]"
             onClick={() => {
-              setLogin(true);
+              setLogin(!login);
             }}
           >
             <span>login</span>
@@ -28,7 +28,7 @@ const Auth = () => {
           <button
             className="flex items-center flex-col group bg-[#f95959] rounded-md px-8 py-2 transition-all duration-200 hover:text-[#233142] hover:bg-[#e3e3e3] text-[#e3e3e3] w-[200px]"
             onClick={() => {
-              setLogin(false);
+              setLogin(!login);
             }}
           >
             <span>signup</span>
