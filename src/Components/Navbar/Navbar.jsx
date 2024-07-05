@@ -53,7 +53,7 @@ export const Navbar = () => {
             </Link>
           </div>
           <div className="flex items-center gap-10">
-            <Link to={""}>
+            <Link to={"/Login"}>
               <button className="flex items-center flex-col group bg-[#f95959] rounded-md px-6 py-2 transition-all duration-200 hover:text-[#233142] hover:bg-[#e3e3e3] text-[#e3e3e3]">
                 <span className="text-sm font-bold">LOGIN</span>
               </button>

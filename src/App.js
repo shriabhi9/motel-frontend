@@ -5,6 +5,8 @@ import { About } from "./Pages/About";
 import { Contact } from "./Pages/Contact";
 import { Hotels } from "./Pages/Hotels";
 import SingleHotel from "./Pages/SingleHotel/SingleHotel";
+import Auth from "./Pages/Auth/Auth";
+
 
 
 
@@ -16,6 +18,7 @@ function App() {
         <Route path="/About" element={<About />} />
         <Route path="/Contact" element={<Contact />} />
         <Route path="/Hotels" element={<Hotels/>} />
+        <Route path="/Login" element={<Auth/>} />
 
         <Route path="/Hotels/:name/:address/:id/reserve" element={<SingleHotel/>}/>
       </Routes>
