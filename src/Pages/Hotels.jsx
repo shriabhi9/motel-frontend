@@ -41,12 +41,6 @@ export const Hotels = () => {
       <div className="px-10 flex flex-col items-center justify-center py-4">
         <div className="flex gap-8">
           <Categories />
-          <button>
-            <span className="flex items-center justify-center gap-2">
-              <CiFilter className="text-2xl" />
-              <p>filter</p>
-            </span>
-          </button>
         </div>
 
         <div className="flex flex-wrap justify-center pt-4 gap-10 py-4">

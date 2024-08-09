@@ -35,6 +35,7 @@ const Register = () => {
               value={username}
               onChange={(e) => setUsername(e.target.value)}
               required
+              placeholder="Enter username"
             />
           </div>
           <div className="flex flex-col gap-4">
@@ -45,6 +46,7 @@ const Register = () => {
               value={number}
               onChange={(e) => setNumber(e.target.value)}
               required
+              placeholder="Enter your valid phone number"
             />
           </div>
           <div className="flex flex-col gap-4">
@@ -55,6 +57,7 @@ const Register = () => {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
+              placeholder="Enter your email address"
             />
           </div>
           <div className="flex flex-col gap-4">
@@ -65,6 +68,7 @@ const Register = () => {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               required
+              placeholder="Enter your password"
             />
           </div>
           <button
