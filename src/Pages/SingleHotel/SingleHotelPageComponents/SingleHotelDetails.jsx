@@ -7,10 +7,8 @@ const SingleHotelDetails = ({ singleHotel }) => {
   const [phoneNumber, setPhoneNumber] = useState("");
   const [name, setName] = useState("");
   const [checkInDate, setCheckInDate] = useState("");
-  const [guest, setGuest] = useState(1);
-  const [price, setPrice] = useState(singleHotel.price);
-
-  const handlePrice = () => {};
+  const [guest, setGuest] = useState(0);
+  const [Price, setPrice] = useState(250);
 
   return (
     <section className="flex justify-between items-start py-8 flex-wrap gap-6">
@@ -123,6 +121,7 @@ const SingleHotelDetails = ({ singleHotel }) => {
 
           <div className="w-full">
             <div className="flex flex-col w-full">
+
               <label className="w-full">
                 <input
                   value={name}
@@ -132,6 +131,7 @@ const SingleHotelDetails = ({ singleHotel }) => {
                   className="outline-none py-2 px-3 w-full"
                 />
               </label>
+
               <label className="">
                 <input
                   type="text"
@@ -146,8 +146,10 @@ const SingleHotelDetails = ({ singleHotel }) => {
                   required
                 />
               </label>
+
             </div>
             <div className="flex flex-col">
+
               <label>
                 <input
                   type="date"
@@ -157,8 +159,8 @@ const SingleHotelDetails = ({ singleHotel }) => {
                   className="outline-none py-2 px-3"
                 />
               </label>
+
               <label>
-                {" "}
                 <input
                   type="number"
                   placeholder="guest"
@@ -174,6 +176,7 @@ const SingleHotelDetails = ({ singleHotel }) => {
                   className="outline-none py-2 px-3 w-[200px]"
                 />
               </label>
+
             </div>
           </div>
 
@@ -183,16 +186,18 @@ const SingleHotelDetails = ({ singleHotel }) => {
             </button>
           </div>
 
-          <div></div>
           <div className="flex justify-between">
             <p>Service fee</p>
-            <p>Rs.150</p>
+            <p>Rs.250</p>
           </div>
+
           <hr />
+
           <div className="flex justify-between">
-            <p>Total</p>
-            <p>Rs.{price}</p>
+            <p>Total Price</p>
+            <p>Rs.{Price}</p>
           </div>
+
         </div>
       </div>
     </section>

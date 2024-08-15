@@ -1,6 +1,8 @@
 import React from "react";
 import { useState } from "react";
 import axios from "axios";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Register = () => {
   const [email, setEmail] = useState("");
@@ -9,6 +11,7 @@ const Register = () => {
   const [number, setNumber] = useState("");
   const [message, setMessage] = useState("");
 
+
   const handleRegister = async (e) => {
     e.preventDefault();
     try {
@@ -16,6 +19,7 @@ const Register = () => {
         "https://hotello-backend-xivc.onrender.com/api/auth/register",
         { username, number, email, password }
       );
+      toast("Register Successfuly")
       setMessage(response.data.message);
     } catch (error) {
       setMessage(error.response.data.message);
@@ -41,12 +45,16 @@ const Register = () => {
           <div className="flex flex-col gap-4">
             <label className="text-2xl font-bold text-red-600">Number</label>
             <input
-              className="outline-none border-b-2 py-2"
-              type="number"
+              type="text"
               value={number}
-              onChange={(e) => setNumber(e.target.value)}
+              className="outline-none border-b-2 py-2"
+              onChange={(e) => {
+                if (/^\d{0,10}$/.test(e.target.value)) {
+                  setNumber(e.target.value);
+                }
+              }}
+              placeholder="Enter 10-digit valid number"
               required
-              placeholder="Enter your valid phone number"
             />
           </div>
           <div className="flex flex-col gap-4">
@@ -80,6 +88,7 @@ const Register = () => {
         </form>
         {message && <p>{message}</p>}
       </div>
+      <ToastContainer/>
     </div>
   );
 };

@@ -4,13 +4,18 @@ import "./index.css";
 import App from "./App";
 import { BrowserRouter } from "react-router-dom";
 import { CategoryProvider } from "./Context/Category-context";
-
+import { LoginProvider } from "./Context/Login-context";
+import { UserProvider } from "./Context/User-context";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <BrowserRouter>
     <CategoryProvider>
-      <App />
+      <LoginProvider>
+        <UserProvider>
+          <App />
+        </UserProvider>
+      </LoginProvider>
     </CategoryProvider>
   </BrowserRouter>
 );

@@ -2,21 +2,22 @@ import React, { useEffect, useState } from "react";
 import { Navbar } from "../Components/Navbar/Navbar";
 import SkeletonGalleryCard from "../Components/utilities/skeletonGalleryCard";
 import axios from "axios";
-
 import Categories from "../Components/Categories/Categories";
-import { CiFilter } from "react-icons/ci";
 import Footer from "../Components/Footer";
 import { useCategory } from "../Context/Category-context";
 import { HotelCard } from "../Components/Gallery/HotelCard";
+
 
 export const Hotels = () => {
   const [hotelsData, setHotelsData] = useState([]);
   const [loading, setLoading] = useState(true);
   const { hotelCategory } = useCategory();
 
+
   useEffect(() => {
     async function fetchingHotelData() {
       try {
+
         const response = await axios.get(
           `https://hotello-backend-xivc.onrender.com/api/hotels?category=${hotelCategory}`
         );
