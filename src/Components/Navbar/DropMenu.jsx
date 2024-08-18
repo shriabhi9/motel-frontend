@@ -2,9 +2,13 @@ import React, { useState } from "react";
 import { FaBarsStaggered } from "react-icons/fa6";
 import { RxCross2 } from "react-icons/rx";
 import { Link } from "react-router-dom";
+import { useLoginProperty } from "../../Context/Login-context";
+import { toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 export const DropMenu = () => {
   const [dMenu, setdMenu] = useState(false);
+  const { LoginProperty,setLoginProperty } = useLoginProperty();
 
   function dropMenuHandler() {
     setdMenu(!dMenu);
@@ -79,14 +83,28 @@ export const DropMenu = () => {
           </button>
         </Link>
 
-        <Link to={"/Login"}>
-          <button className="flex items-center flex-col group bg-[#f95959] rounded-md px-6 py-2 transition-all duration-200 hover:text-[#233142] hover:bg-[#e3e3e3] text-[#e3e3e3]">
-            <span className="text-sm font-bold scale-100 group-hover:scale-95 duration-200 transition-all">
-              LOGIN
-            </span>
-          </button>
-        </Link>
+        <div>
+          {LoginProperty ? (
+            <button onClick={()=>{
+              setLoginProperty(false)
+              toast("Logout successfuly")
+            }} className="flex items-center flex-col group bg-[#f95959] rounded-md px-6 py-2 transition-all duration-200 hover:text-[#233142] hover:bg-[#e3e3e3] text-[#e3e3e3]">
+              <span className="text-sm font-bold scale-100 group-hover:scale-95 duration-200 transition-all">
+                LOGOUT
+              </span>
+            </button>
+          ) : (
+            <Link to={"/Login"}>
+              <button className="flex items-center flex-col group bg-[#f95959] rounded-md px-6 py-2 transition-all duration-200 hover:text-[#233142] hover:bg-[#e3e3e3] text-[#e3e3e3]">
+                <span className="text-sm font-bold scale-100 group-hover:scale-95 duration-200 transition-all">
+                  LOGIN
+                </span>
+              </button>
+            </Link>
+          )}
+        </div>
       </div>
+    
     </div>
   );
 };

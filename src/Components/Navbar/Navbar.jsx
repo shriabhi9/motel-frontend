@@ -2,10 +2,15 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { DropMenu } from "./DropMenu";
 import { useLoginProperty } from "../../Context/Login-context";
+import { BsPeople } from "react-icons/bs";
+import { useState } from "react";
+import { toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 export const Navbar = () => {
+  const { LoginProperty, setLoginProperty } = useLoginProperty();
+  const [show, setShow] = useState(false);
 
-  const { LoginProperty } = useLoginProperty();
   console.log(LoginProperty);
   return (
     <div className="sticky top-3 z-[10]">
@@ -56,14 +61,32 @@ export const Navbar = () => {
             </Link>
           </div>
           <div className="flex items-center gap-10">
-            {
-              LoginProperty ? `hello ${"/"}`:<Link to={"/Login"}>
+            {LoginProperty ? (
+              <div className="flex">
+                <button
+                  className="flex items-center gap-2"
+                  onClick={() => {
+                    setShow(!show);
+                  }}
+                >
+                  <p>Hi,</p>
+                  <BsPeople className="text-xl" />
+                </button>
+              </div>
+            ) : (
+              <Link to={"/Login"}>
                 <button className="flex items-center flex-col group bg-[#f95959] rounded-md px-6 py-2 transition-all duration-200 hover:text-[#233142] hover:bg-[#e3e3e3] text-[#e3e3e3]">
                   <span className="text-sm font-bold">LOGIN</span>
                 </button>
               </Link>
-            }
-            
+            )}
+          {show ? <button 
+          onClick={()=>{
+            setLoginProperty(false)
+            setShow(!show)
+            toast("Logout Succesfuly")
+          }}
+          className="absolute top-16 ">Logout</button> : ""}
           </div>
         </nav>
       </div>

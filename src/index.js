@@ -5,16 +5,13 @@ import App from "./App";
 import { BrowserRouter } from "react-router-dom";
 import { CategoryProvider } from "./Context/Category-context";
 import { LoginProvider } from "./Context/Login-context";
-import { UserProvider } from "./Context/User-context";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <BrowserRouter>
     <CategoryProvider>
       <LoginProvider>
-        <UserProvider>
-          <App />
-        </UserProvider>
+        <App />
       </LoginProvider>
     </CategoryProvider>
   </BrowserRouter>
